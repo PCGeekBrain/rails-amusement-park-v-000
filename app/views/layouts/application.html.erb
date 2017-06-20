@@ -24,6 +24,15 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
            <!--  nav here -->
+           <% if logged_in? %>
+             <li>
+               <%= link_to "Log Out", sign_out_path%>
+             </li>
+           <% else %>
+             <li>
+               <%= link_to "Sign In", sign_in_path%>
+             </li>
+           <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

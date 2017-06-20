@@ -1,0 +1,10 @@
+<%= flash[:notice] %>
+
+<h1>Name: <%= @user.name %></h1>
+<% if @user.admin %><p>ADMIN</p><% end %>
+<p>Mood: <%= @user.mood %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Height: <%= @user.height %></p>
+<%= link_to "Edit", edit_user_path(@user) %>
+<br />
+<%= link_to "See attractions", attractions_path %>
